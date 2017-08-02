@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.ourpillstalk.activities.HistoryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout2"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            app:theme="@style/ToolBarStyle">
+
+            <ImageView
+                android:id="@+id/search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="right"
+                android:src="@drawable/search"/>
+
+            <ImageView
+                android:id="@+id/cross_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:src="@drawable/cross"/>
+
+            <EditText
+                android:id="@+id/edt_searchAtToolbar"
+                android:layout_width="match_parent"
+                android:hint="Search For Scans"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch_hideDupicateScan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hide duplicate scans"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:theme="@style/SCBSwitch"
+                android:textSize="@dimen/switchTextSize"/>
+
+            <TextView
+                android:id="@+id/txt_translatedhideDupicateScan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:paddingLeft="16dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="(Hide duplicate scans)"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/secondary_text_default_material_light"
+                android:typeface="sans"
+                android:textSize="@dimen/textSize1"
+                tools:ignore="HardcodedText"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/list_totalScans"
+            android:paddingLeft="5dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:dividerHeight="1dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_mail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:background="@color/colorAccent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/mail_to"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/white"
+                android:text="mail to: Tab here to enter Your Email Id"
+                android:padding="16dp"/>
+
+            <EditText
+                android:id="@+id/edt_editMail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:theme="@style/editText"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:hint="Enter Your Email Id"
+                android:inputType="textEmailAddress"
+                android:visibility="gone"
+                android:textColorHint="@color/white"
+                android:padding="8dp"/>
+
+            <ImageButton
+                android:id="@+id/imgbtn_done"
+                android:background="@color/colorAccent"
+                android:layout_marginRight="16dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:scaleType="fitXY"
+                android:src="@drawable/done"/>
+
+            <!--<ImageButton
+                android:id="@+id/imgbtn_retypeMail"
+                android:background="@color/colorAccent"
+                android:layout_marginRight="16dp"
+                android:layout_width="@dimen/snd_logo_size"
+                android:layout_height="@dimen/snd_logo_size"
+                android:visibility="gone"
+                android:src="@drawable/edit_mail"/>-->
+
+            <ImageButton
+                android:id="@+id/imgbtn_sendMail"
+                android:background="@color/colorAccent"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="4dp"
+                android:paddingRight="4dp"
+                android:paddingLeft="2dp"
+                android:paddingBottom="4dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/send_mail"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

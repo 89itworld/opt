@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="au.com.ourpillstalk.ourpillstalk">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:screenOrientation="portrait"
+        android:name="au.com.ourpillstalk.ourpillstalk.util.MyApplication">
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.HistoryActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/HistoryActivityTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.SettingsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.EmergencyActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.HelpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.ScanActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />
+        <activity android:name="au.com.ourpillstalk.ourpillstalk.activities.UserInfoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

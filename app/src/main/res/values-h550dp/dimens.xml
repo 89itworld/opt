@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="circle_height_c">170dp</dimen>
+    <dimen name="circle_height">140dp</dimen>
+    <dimen name="textSize">50sp</dimen>
+    <dimen name="textSizeee">34sp</dimen>
+    <dimen name="textSize1">17sp</dimen>
+    <dimen name="switchTextSize">18sp</dimen>
+    <dimen name="logoSize">35sp</dimen>
+    <dimen name="logoSize1">80sp</dimen>
+    <dimen name="mail_to">20sp</dimen>
+    <dimen name="snd_logo_size">24sp</dimen>
+    <dimen name="qr_size">100sp</dimen>
+</resources>

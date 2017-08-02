@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearLayout3"
+    tools:context="com.ourpillstalk.activities.ScanActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please scan a compatible Our Pills Talk QR code."
+                android:id="@+id/lastScanTextView"
+                android:textSize="21sp"
+                android:gravity="center"
+                android:padding="1sp" />
+
+            <TextView
+                android:id="@+id/txt_pillsInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="21dp"
+                android:textSize="21sp"/>
+
+            <TextView
+                android:id="@+id/txt_pillsInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:lineSpacingExtra="2dp"
+                android:textSize="21sp"/>
+
+            <TextView
+                android:id="@+id/txt_despenseDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="4dp">
+
+            <Button
+                android:id="@+id/fab_stop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp"
+                android:textColor="@color/white"
+                android:background="@color/red"
+                android:text="STOP"/>
+
+            <Button
+                android:id="@+id/fab_cmi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/white"
+                android:background="@color/blue"
+                android:text="CMI"/>
+
+            <Button
+                android:id="@+id/fab_replay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/white"
+                android:background="@color/dark_green"
+                android:text="REPLAY"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_forHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"
+                android:layout_gravity="left"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/fab_more"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete_icon"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

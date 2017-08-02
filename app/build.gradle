@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'ourpillstalk2'
+            keyPassword 'W?s\'13C@}02#/&h'
+            storeFile file('/home/dev/Desktop/OurPillsTalk/certificateinfo/ourpillstalk.jks')
+            storePassword 'W?s\'13C@}02#/&h'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "au.com.ourpillstalk.ourpillstalk"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 15
+        versionName "1.9"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.journeyapps:zxing-android-embedded:3.3.0'
+    compile 'com.memetix:microsoft-translator-java-api:0.6.2'
+    compile 'commons-io:commons-io:+'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.android.volley:volley:1.0.0'
+}
